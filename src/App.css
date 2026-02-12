@@ -1,0 +1,19 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Import all page-specific CSS here */
+@import './pages/Accueil.css';
+@import './pages/APropos.css';
+@import './pages/Services.css';
+@import './pages/Galerie.css';
+@import './pages/Contact.css';
+@import './pages/Connexion.css';
+@import './pages/Dashboard.css';
+@import './components/ImageSlider.css';
