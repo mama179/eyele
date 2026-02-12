@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
+// Import theme styles
+import './styles/light-theme.css';
+import './styles/dark-theme.css';
+
 // Import pages
 import Accueil from './pages/Accueil';
 import APropos from './pages/APropos';
@@ -10,6 +14,9 @@ import Galerie from './pages/Galerie';
 import Contact from './pages/Contact';
 import Connexion from './pages/Connexion';
 import Dashboard from './pages/Dashboard';
+
+// Import components
+import ThemeToggle from './components/ThemeToggle';
 
 // Header Component
 const Header = () => {
@@ -72,6 +79,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ThemeToggle />
         <Header />
         
         <main>

@@ -1,0 +1,401 @@
+/* Dark Theme for Eyele Studios */
+
+/* CSS Variables for Dark Theme */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-muted: #808080;
+  --accent-primary: #ffb938;
+  --accent-secondary: #734208;
+  --accent-dark: #5a3206;
+  --border-color: #333333;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-heavy: rgba(0, 0, 0, 0.8);
+  --gradient-primary: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  --gradient-secondary: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  --gradient-accent: linear-gradient(135deg, #734208 0%, #ffb938 100%);
+}
+
+/* Global Dark Theme Styles */
+body.dark-theme {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Header Dark Theme */
+.dark-theme .header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px var(--shadow-light);
+}
+
+.dark-theme .nav-links a {
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .nav-links a:hover {
+  color: var(--accent-primary);
+  text-shadow: 0 0 10px rgba(255, 185, 56, 0.5);
+}
+
+/* Hero Sections Dark Theme */
+.dark-theme .hero,
+.dark-theme .hero-contact,
+.dark-theme .hero-galerie,
+.dark-theme .hero-services,
+.dark-theme .hero-connexion {
+  background: var(--gradient-primary);
+  position: relative;
+}
+
+.dark-theme .hero::before,
+.dark-theme .hero-contact::before,
+.dark-theme .hero-galerie::before,
+.dark-theme .hero-services::before,
+.dark-theme .hero-connexion::before {
+  opacity: 0.3;
+  background-blend-mode: overlay;
+}
+
+.dark-theme .hero h1,
+.dark-theme .hero-contact h1,
+.dark-theme .hero-galerie h1,
+.dark-theme .hero-services h1,
+.dark-theme .hero-connexion h1 {
+  color: var(--accent-primary);
+  text-shadow: 2px 2px 8px var(--shadow-heavy);
+}
+
+.dark-theme .hero p,
+.dark-theme .hero-contact p,
+.dark-theme .hero-galerie p,
+.dark-theme .hero-services p,
+.dark-theme .hero-connexion p {
+  color: var(--text-secondary);
+}
+
+/* Content Sections Dark Theme */
+.dark-theme .features,
+.dark-theme .values,
+.dark-theme .team,
+.dark-theme .testimonials,
+.dark-theme .contact-info-section,
+.dark-theme .services-intro,
+.dark-theme .about-intro,
+.dark-theme .projects-grid,
+.dark-theme .auth-section {
+  background: var(--gradient-secondary);
+}
+
+.dark-theme .process,
+.dark-theme .milestones,
+.dark-theme .cta-contact,
+.dark-theme .cta-galerie,
+.dark-theme .cta-services,
+.dark-theme .support-section {
+  background: var(--gradient-primary);
+}
+
+/* Cards Dark Theme */
+.dark-theme .feature-card,
+.dark-theme .service-card,
+.dark-theme .testimonial-card,
+.dark-theme .contact-card,
+.dark-theme .gallery-item,
+.dark-theme .project-card,
+.dark-theme .team-member,
+.dark-theme .value-card,
+.dark-theme .auth-container,
+.dark-theme .form-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .feature-card:hover,
+.dark-theme .service-card:hover,
+.dark-theme .testimonial-card:hover,
+.dark-theme .contact-card:hover,
+.dark-theme .gallery-item:hover,
+.dark-theme .project-card:hover,
+.dark-theme .team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px var(--shadow-medium);
+  border-color: var(--accent-primary);
+}
+
+/* Form Elements Dark Theme */
+.dark-theme .form-group input,
+.dark-theme .form-group select,
+.dark-theme .form-group textarea {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .form-group input:focus,
+.dark-theme .form-group select:focus,
+.dark-theme .form-group textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(255, 185, 56, 0.2);
+  background: var(--bg-secondary);
+}
+
+.dark-theme .form-group label {
+  color: var(--text-secondary);
+}
+
+/* Buttons Dark Theme */
+.dark-theme .btn-primary {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 15px rgba(255, 185, 56, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .btn-primary:hover {
+  background: var(--accent-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 6px 20px rgba(115, 66, 8, 0.4);
+}
+
+.dark-theme .btn-secondary {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+}
+
+.dark-theme .btn-secondary:hover {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* Text and Headings Dark Theme */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 {
+  color: var(--text-primary);
+}
+
+.dark-theme h2::after {
+  background: var(--accent-primary);
+}
+
+.dark-theme p,
+.dark-theme li,
+.dark-theme span {
+  color: var(--text-secondary);
+}
+
+/* Footer Dark Theme */
+.dark-theme .footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+.dark-theme .footer-links a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.dark-theme .footer-links a:hover {
+  color: var(--accent-primary);
+}
+
+.dark-theme .contact-info h3,
+.dark-theme .contact-info h4 {
+  color: var(--text-primary);
+}
+
+.dark-theme .contact-info p {
+  color: var(--text-secondary);
+}
+
+/* Slider Dark Theme */
+.dark-theme .slider {
+  background: var(--bg-primary);
+}
+
+.dark-theme .slide::before {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(42, 42, 42, 0.8) 100%);
+}
+
+.dark-theme .dot {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme .dot.active {
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(255, 185, 56, 0.5);
+}
+
+/* Modal Dark Theme */
+.dark-theme .modal-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px var(--shadow-heavy);
+}
+
+.dark-theme .modal-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Tabs Dark Theme */
+.dark-theme .category-tab {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
+}
+
+.dark-theme .category-tab.active {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+.dark-theme .category-tab:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Progress Bars Dark Theme */
+.dark-theme .progress-bar {
+  background: var(--bg-tertiary);
+}
+
+.dark-theme .progress {
+  background: var(--gradient-accent);
+}
+
+/* Status Badges Dark Theme */
+.dark-theme .status.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.dark-theme .status.production {
+  background: rgba(255, 185, 56, 0.2);
+  color: var(--accent-primary);
+}
+
+.dark-theme .status.post-production {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196F3;
+}
+
+.dark-theme .status.pre-production {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9C27B0;
+}
+
+/* Icons Dark Theme */
+.dark-theme .service-icon,
+.dark-theme .feature-icon,
+.dark-theme .contact-icon,
+.dark-theme .support-icon,
+.dark-theme .step-number {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 15px rgba(255, 185, 56, 0.3);
+}
+
+/* Timeline Dark Theme */
+.dark-theme .timeline::before {
+  background: var(--accent-primary);
+}
+
+.dark-theme .milestone-content {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+/* Success Messages Dark Theme */
+.dark-theme .success-message {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.dark-theme .message.info {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196F3;
+  border: 1px solid #2196F3;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 185, 56, 0.3);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 185, 56, 0.4);
+}
+
+.dark-theme .theme-toggle {
+  background: var(--accent-secondary);
+}
+
+/* Responsive Dark Theme */
+@media (max-width: 768px) {
+  .dark-theme .hero h1,
+  .dark-theme .hero-contact h1,
+  .dark-theme .hero-galerie h1,
+  .dark-theme .hero-services h1,
+  .dark-theme .hero-connexion h1 {
+    font-size: 2rem;
+  }
+  
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Smooth Transitions */
+.dark-theme * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Scrollbar Dark Theme */
+.dark-theme ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}

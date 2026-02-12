@@ -17,3 +17,4 @@ main {
 @import './pages/Connexion.css';
 @import './pages/Dashboard.css';
 @import './components/ImageSlider.css';
+@import './components/ThemeToggle.css';
